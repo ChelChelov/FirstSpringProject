@@ -1,44 +1,17 @@
 package com.oleg;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class MusicPlayer {
-    private List<Music> musicList = new ArrayList<>();
-    private String name;
-    private int volume;
-
-    public MusicPlayer() {
-    }
-
-    public MusicPlayer(List<Music> list) {
-        this.musicList = list;
-    }
-
-    public void setMusicList(List<Music> musicList) {
-        this.musicList = musicList;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
+    @Autowired
+    private Music music;
 
     public void playMusic() {
-        for (Music p :
-                musicList) {
-            System.out.println("Playing: " + p.getSong());
+            System.out.println("Playing: " + music.getSong());
         }
-    }
+
 }
