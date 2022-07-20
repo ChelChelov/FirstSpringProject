@@ -11,13 +11,10 @@ public class TestSpring {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml");
 
-        MusicPlayer musicPlayer = context.getBean("MusicPlayer", MusicPlayer.class);
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        musicPlayer.playMusic();
-
-        System.out.println(musicPlayer.getName() + "\n" + musicPlayer.getVolume());
+        musicPlayer.playMusic(PlayList.ELECTRO);
 
         context.close();
     }
 }
-// ДЗ сделать лист жанров музыки вместо одного жанра
