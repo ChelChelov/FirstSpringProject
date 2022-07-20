@@ -13,9 +13,8 @@ public class TestSpring {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        musicPlayer.playMusic();
+        musicPlayer.playMusic(PlayList.ELECTRO);
 
         context.close();
     }
 }
-// ДЗ сделать лист жанров музыки вместо одного жанра
