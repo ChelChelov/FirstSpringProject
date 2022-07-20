@@ -9,5 +9,8 @@
         <module name="FirstSpringProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FirstSpringProject" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
