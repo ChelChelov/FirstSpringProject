@@ -13,7 +13,13 @@ public class TestSpring {
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        musicPlayer.playMusic(PlayList.ELECTRO);
+        musicPlayer.playMusic(PlayList.ROCK);
+
+        System.out.println(musicPlayer.getName());
+
+        System.out.println(musicPlayer.getVolume());
+
+        ElectroMusic electroMusic = context.getBean("electroMusic", ElectroMusic.class);
 
         context.close();
     }
