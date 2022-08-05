@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-//@Component
+@Component
 public class ElectroMusic implements Music{
     private List<String> electroMusicList = new ArrayList<>();
     @Override

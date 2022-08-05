@@ -2,17 +2,18 @@ package com.oleg;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Component // It's a mark to create the bean of this class
 public class MusicPlayer {
     private Music music1;
     private Music music2;
 
-    @Autowired
+    @Autowired // Automatically implement dependencies.
     public MusicPlayer(@Qualifier("electroMusic") Music music1,
                        @Qualifier("rockMusic") Music music2) {
         this.music1 = music1;
